@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com JS+HTML</title>
+    <style>
+        div#area{
+            background: rgb(6, 230, 6);
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrando()" onmouseout="saindo()">
+        interaja...
+    </div>
+
+    <script>
+        // a parte de cima faz o html chmar os métodos, MAS ELES PODEM
+        // ser tratados direto no javascript.
+        var a = window.document.getElementsByTagName('div')[0];
+        //criando a variável fora da function, posso repetir nelas.
+        function clicar(){
+            var clicou = window.document.querySelector
+            ('div#area');
+            clicou.innerText = 'Clicou Caralho!!';
+            a.style.background = "red";
+    
+        }
+        function entrando(){
+            var entrou = window.document.getElementById("area");
+            entrou.innerText = "Ta entrando o grosso!";
+            a.style.background = "blue";
+        }
+        function saindo(){
+            a.innerText = "Raspou Gostoso aqui!";
+            a.style.background = "green";
+            a.style.color = "black";
+            
+        }
+
+    </script>
+</body>
+</html>

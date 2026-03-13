@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background: rgb(0, 64, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas do DETRAN</h1>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="mul">Resultado</div>
+
+    <script>
+        function clicar(){
+            var vel = window.document.getElementById("txtvel");
+            if(Number(vel.value) > 60){
+                var multa = window.document.getElementById('mul');
+                multa.innerHTML = "Você está acima da velocidade permitida <strong>Multado<strong/> Cabaço";
+            }else{
+                var sem = window.document.getElementsByTagName('div')[0];
+                sem.innerText = "Parabéns, está Dentro da velocidade Permitida.";
+            }
+        }
+    </script>
+</body>
+</html>

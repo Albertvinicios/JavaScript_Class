@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interação com js</title>
+    <style>
+          div#area{
+            background: rgb(6, 230, 6);
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById("area");
+        //Utilização do Java script para chamar métodos
+        //sem utilizar HTML usando a variável.addEventListener
+        //exemplo anterior no html, com diferentes variáveis
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrando);
+        a.addEventListener('mouseout', saindo);
+        
+        function clicar(){
+            a.innerText = "Clicou gostoso";
+            a.style.background = "red";
+        }
+        function entrando(){
+            a.innerText = "Está perto";
+            a.style.color = "pink"
+        }
+        function saindo(){
+            a.innerText = "Já Vai Tarde";
+            a.style.background = "black";
+            a.style.color = "white";
+        }
+    </script>
+</body>
+</html>

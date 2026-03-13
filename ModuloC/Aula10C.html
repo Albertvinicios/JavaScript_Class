@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        var n1 = window.document.getElementById("txt1");
+        var n2 = window.document.querySelector("input#txt2");
+        function somar(){
+            var soma = Number(n1.value)+Number(n2.value);
+            var resu = window.document.getElementById("res");
+            resu.innerHTML = `A soma dos Números ${Number(n1.value)} mais ${Number(n2.value)} é ${soma}`;
+        }
+    </script>
+</body>
+</html>

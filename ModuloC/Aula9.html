@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de inicição ao DOM</title>
+    <style>
+        body{
+            background: rgb(158, 3, 3);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <p>Chama papai!!</p>
+    <h1>Ai pai para!</h1>
+    <p>meu ovo esquerdo</p>
+    <p>Meu ovo com <strong>DOM</strong> em negrito</p>
+    <div id="msg">Clica em Mim Carai!</div>
+    <script>
+        var corpo = window.document.body;//pegando corpo
+        window.document.write(window.document.location);//pegando localização
+        var p2 = window.document.getElementsByTagName('p')[2];
+        var p1 = window.document.getElementsByTagName('p')[0];//se tiver mais de um, o colchete escolhe
+        window.document.write('<br/>'+p1.innerText); // printa a seleção da tag
+        p1.style.color = 'blue';//alterando stilos pegos no js
+        corpo.style.background = 'black';//alterando corpo apos pegar
+        window.document.write('<br/>'+p2.innerHTML);//inner HTML pega a formatação.neguinho!
+        var d = window.document.getElementById("msg");//coloca idenficação na div e pega por id
+        d.style.background = "green";// mudando a cor de fundo
+        //alterando de id, para class, ou para nome, pode pegar pelas outras formar de getElemments
+        //o mais recomendavel é utilzar o queryselector, ao invés de id, name e etc...
+        var c = window.document.querySelector('div#msg');//toda classe utiliza . e toda div # 
+        window.document.write('<br/>'+c.innerHTML);
+        c.innerHTML = 'novo texto desejado';//altera o texto
+        window.document.write('<br/>'+c.innerHTML);//impressão alterada
+    </script>
+</body>
+</html>

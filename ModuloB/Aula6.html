@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro Programa..</title>
+    <style>
+        body{
+            background-color: rgb(50, 50, 195);
+            font: normal 25pt arial;
+        }
+        h1 { 
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Olá Mundo!</p>
+    <script>
+       var nome = window.prompt('Digite seu nome');
+       window.alert("É um grande Prazer telo aqui "+ nome);
+       var n1 = window.prompt("Agora Digite um numero "+ nome);
+       var n2 = Number.parseInt(window.prompt("Digite outro caro "+ nome));
+       n1 = Number.parseInt(n1); // Você pode converter dessa forma, ou da anterior.
+       var s = n1+n2; //caso não converta, o método Window retorna String
+       window.alert("A soma dos números é "+ s); // tornando impossível a concatenação;
+       var n3 = Number(window.prompt("Legal agora digite outro ")); // ambas as formas
+       var n4 = window.prompt("outro por gentileza ");//a outra forma você força.
+       n4 = Number(n4);//Number consegue identificar e converter o tipo.
+       var soma = n3 + n4;
+       window.alert("A soma dos novos números é "+ soma);
+       n4.toString(); //conversão para String, Método toString
+       String(n4); // forma de conversão semelhante
+       window.alert(`Utilizando Template Strings place Holder e crase no print ${n4}`);
+       //Forma de escrever mais facilmente em um print, mais bonito que usar +++ concat
+    </script>
+</body>
+</html>

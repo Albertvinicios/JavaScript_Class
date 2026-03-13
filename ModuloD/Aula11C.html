@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação Nacional</title>
+
+    <style>
+        body{
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifica Origem</h1>
+    <input type="text" name="txt1" id="txt1">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function clicar(){
+            var tex = window.document.getElementById('txt1');
+            var strin = tex.value.toLowerCase();
+            if(strin == 'brasil'){
+                var res = window.document.getElementById('res');
+                res.innerHTML = 'Você é um brasileirinho Médio';
+            }else{
+                var res = window.document.getElementById('res');
+                res.innerHTML = 'Sai do meu país estrangeiro ladrão de emprego';
+            }
+        }
+        
+    </script>
+</body>
+</html>
