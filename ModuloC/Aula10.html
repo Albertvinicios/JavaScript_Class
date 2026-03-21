@@ -17,30 +17,34 @@
 <body>
     <div id="area" onclick="clicar()" onmouseenter="entrando()" onmouseout="saindo()">
         interaja...
-    </div>
+    </div> <!--onclick se clicar aciona o método js e assim por diante-->
 
     <script>
-        // a parte de cima faz o html chmar os métodos, MAS ELES PODEM
+        // a parte de cima faz o html chamar os métodos, MAS ELES PODEM
         // ser tratados direto no javascript.
-        var a = window.document.getElementsByTagName('div')[0];
-        //criando a variável fora da function, posso repetir nelas.
+        var a = window.document.getElementsByTagName('div')[0]; //0 é a primeira div, ou seja
+        //nesse caso a única. Pegando a div para tratar os eventos.
+        //criando a variável fora da function, posso repetir nelas, caso crie dentro não.
         function clicar(){
-            var clicou = window.document.querySelector
-            ('div#area');
-            clicou.innerText = 'Clicou Caralho!!';
-            a.style.background = "red";
+            var clicou = window.document.querySelector('div#area');//variável clicou para pegar a div
+            //e alterar o texto e a cor.
+            clicou.innerText = 'Clicou!!'; //inner text para alterar o texto da div
+            //clicou é a variável que pegou a div, e o innerText é o texto dela.
+            a.style.background = "red"; //alterando a cor da div, utilizando a variável a
+            //que é a div, e o estilo de background.
     
         }
         function entrando(){
-            var entrou = window.document.getElementById("area");
-            entrou.innerText = "Ta entrando o grosso!";
-            a.style.background = "blue";
+            var entrou = window.document.getElementById("area"); //variável entrou para pegar a div por id
+            // para alterar o texto e a cor.
+            entrou.innerText = "Entrando na área!"; //altera o texto
+            a.style.background = "blue"; //muda o background para azul
+
         }
-        function saindo(){
-            a.innerText = "Raspou Gostoso aqui!";
-            a.style.background = "green";
-            a.style.color = "black";
-            
+        function saindo(){ //métodos em java script, para tratar os eventos do html.
+            a.innerText = "Saindo da área!"; //alterando o texto
+            a.style.background = "green"; //altera cor de fundo
+            a.style.color = "black"; //altera cor da letra.
         }
 
     </script>

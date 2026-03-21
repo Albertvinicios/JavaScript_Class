@@ -18,10 +18,13 @@
     <h1>Olá Mundo!</h1>
     <p>Olá Mundo!</p>
     <script>
-       var nome = window.prompt('Digite seu nome');
-       window.alert("É um grande Prazer telo aqui "+ nome);
-       var n1 = window.prompt("Agora Digite um numero "+ nome);
-       var n2 = Number.parseInt(window.prompt("Digite outro caro "+ nome));
+       var nome = window.prompt('Digite seu nome'); // método para solicitar um dado do usuário
+       //o método prompt retorna uma String
+       window.alert("É um grande Prazer telo aqui "+ nome); // método para exibir uma mensagem para o usuário
+       //pode ser usado para mostrar o resultado de um cálculo ou uma mensagem de erro.
+       var n1 = window.prompt("Agora Digite um numero "+ nome); //var armazena valor,prompt gera janela
+       var n2 = Number.parseInt(window.prompt("Digite outro caro "+ nome));//numero inteiro, parseFloat
+       //para numero real Number para ambos
        n1 = Number.parseInt(n1); // Você pode converter dessa forma, ou da anterior.
        var s = n1+n2; //caso não converta, o método Window retorna String
        window.alert("A soma dos números é "+ s); // tornando impossível a concatenação;
@@ -29,7 +32,7 @@
        var n4 = window.prompt("outro por gentileza ");//a outra forma você força.
        n4 = Number(n4);//Number consegue identificar e converter o tipo.
        var soma = n3 + n4;
-       window.alert("A soma dos novos números é "+ soma);
+       window.alert("A soma dos novos números é "+ soma); //gera alerta
        n4.toString(); //conversão para String, Método toString
        String(n4); // forma de conversão semelhante
        window.alert(`Utilizando Template Strings place Holder e crase no print ${n4}`);

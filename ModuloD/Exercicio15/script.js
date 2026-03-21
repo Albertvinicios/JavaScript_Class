@@ -1,21 +1,21 @@
 function verificar(){
     var data = new Date();
-    var ano = data.getFullYear();
+    var ano = data.getFullYear(); //pega por data com ano completo
     var fano = document.getElementById('txtano');
     var res = document.querySelector('div#res');
     var idade = ano - Number(fano.value)
-
+    //outra forma de fazer o exercício 15, forma do professor
     if(fano.value.length == 0 || Number(fano.value) > ano){
-        window.alert('[Erro] Verifique os dados e tente novamente');
+        window.alert('[Erro] Verifique os dados e tente novamente'); //se for 0 não existe.
     }else{
-        var fsex = window.document.getElementsByName('radsex');
-        var genero = ' '
-        var img = window.document.createElement('img');
-        img.setAttribute('id', 'foto');
+        var fsex = window.document.getElementsByName('radsex'); //pega a escolha
+        var genero = ' ' //a definir
+        var img = window.document.createElement('img'); //cria elemento img
+        img.setAttribute('id', 'foto'); //inicia com essas fotos
         if(fsex[0].checked){
             genero = 'Homem'
             if(idade > 0 && idade < 4){
-                img.setAttribute('src','bebe.jpg');
+                img.setAttribute('src','bebe.jpg'); //e muda o atributo conforma idade
             }else if(idade >= 4 && idade < 10){
                 img.setAttribute('src', 'criancahomi.jpg');
             }else if(idade < 21){
@@ -47,7 +47,8 @@ function verificar(){
         res.innerHTML = `detectamos um ${genero} com idade ${idade} anos`
         img.style = "border-radius: 50%"; 
         img.width = "250"; 
-        img.height = "250";
-        res.appendChild(img)
+        img.height = "250"; //utilização de design css em js para html
+        res.appendChild(img) //método appendChild faz com que a img muda
+        //dependendo do resultado do filho.
     }
 }

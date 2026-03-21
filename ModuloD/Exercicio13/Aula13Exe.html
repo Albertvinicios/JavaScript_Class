@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo De Exercicio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css"> <!--utilização de css Externo -->
 </head>
 <body>
+
     <header>
         <h1>Verificador de Idade</h1>
-    </header>
+    </header> <!--Utilização de tags semanticas-->
+
     <section>
+
         <div id="ano">
             Ano de Nascimento: <input type="number" name="txt1" id="txt1">
         </div>
+
         <div id="sexo">
             Sexo: <input type="checkbox" name="chec1" id="chec1"> Masculino
             <input type="checkbox" name="chec2" id="chec2"> Feminino
         </div>
+
         <div id="verifica" onclick="verificar()">
             <input type="button" value="Verificar">
         </div>
+
         <div id="detector" style="text-align: center">
             <br><br/>
             Aguardando informações
         </div>
+
         <div id="foto">
             <img id="imagem" style="border-radius: 50%" width="250" height="250" src="bebe.jpg" alt="foto">
         </div>
+
     </section>
+
     <footer>
         <p>&copy;Curso em Video</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="script.js"> //aciona o arquivo JS externo, padrão profissional.
+        //normalmente se usa uma pasta para armazenar as imagens, nesse caso não utilizei
+        //mas nos próximos exemplos vou utilizar.
+    </script> 
 </body>
 </html>

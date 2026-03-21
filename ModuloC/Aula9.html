@@ -13,11 +13,11 @@
     </style>
 </head>
 <body>
-    <p>Chama papai!!</p>
-    <h1>Ai pai para!</h1>
-    <p>meu ovo esquerdo</p>
-    <p>Meu ovo com <strong>DOM</strong> em negrito</p>
-    <div id="msg">Clica em Mim Carai!</div>
+    <p>Parágrafo normal</p>
+    <h1>Título</h1>
+    <p>Parágrafo pós título</p>
+    <p>parágrafo com <strong>DOM</strong> em negrito</p>
+    <div id="msg">Div com botão em JS</div>  <!--div com conceito de id, botão criado em js-->
     <script>
         var corpo = window.document.body;//pegando corpo
         window.document.write(window.document.location);//pegando localização
@@ -26,15 +26,15 @@
         window.document.write('<br/>'+p1.innerText); // printa a seleção da tag
         p1.style.color = 'blue';//alterando stilos pegos no js
         corpo.style.background = 'black';//alterando corpo apos pegar
-        window.document.write('<br/>'+p2.innerHTML);//inner HTML pega a formatação.neguinho!
+        window.document.write('<br/>'+p2.innerHTML);//inner HTML pega a formatação.negrito!
         var d = window.document.getElementById("msg");//coloca idenficação na div e pega por id
         d.style.background = "green";// mudando a cor de fundo
         //alterando de id, para class, ou para nome, pode pegar pelas outras formar de getElemments
         //o mais recomendavel é utilzar o queryselector, ao invés de id, name e etc...
-        var c = window.document.querySelector('div#msg');//toda classe utiliza . e toda div # 
+        var c = window.document.querySelector('div#msg');//toda classe utiliza . e toda div# 
         window.document.write('<br/>'+c.innerHTML);
-        c.innerHTML = 'novo texto desejado';//altera o texto
-        window.document.write('<br/>'+c.innerHTML);//impressão alterada
+        c.innerHTML = 'novo texto desejado';    //altera o texto
+        window.document.write('<br/>'+c.innerHTML); //impressão alterada
     </script>
 </body>
 </html>

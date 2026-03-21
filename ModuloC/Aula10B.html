@@ -23,12 +23,15 @@
         //Utilização do Java script para chamar métodos
         //sem utilizar HTML usando a variável.addEventListener
         //exemplo anterior no html, com diferentes variáveis
-        a.addEventListener('click', clicar);
+        a.addEventListener('click', clicar); //utiliza addEventListener fora direto no JS
+        //Assim não é necessário colocar o evento em HTML, apenas atribua a variável e o evento.
+        //e elimine a palavra on, não utiliza onclick, onmouseenter, onmouseout.
         a.addEventListener('mouseenter', entrando);
         a.addEventListener('mouseout', saindo);
+        //tudo isso são interações, parte fundamental do js
         
         function clicar(){
-            a.innerText = "Clicou gostoso";
+            a.innerText = "Clicou!";
             a.style.background = "red";
         }
         function entrando(){
@@ -36,7 +39,7 @@
             a.style.color = "pink"
         }
         function saindo(){
-            a.innerText = "Já Vai Tarde";
+            a.innerText = "Já Vai?";
             a.style.background = "black";
             a.style.color = "white";
         }
