@@ -13,19 +13,19 @@
 </head>
 <body>
     <h1>Sistema de Multas do DETRAN</h1>
-    <input type="number" name="txtvel" id="txtvel">
-    <input type="button" value="verificar" onclick="clicar()">
-    <div id="mul">Resultado</div>
+    <input type="number" name="txtvel" id="txtvel"> <!--entrada de dados, velocidade medida -->
+    <input type="button" value="verificar" onclick="clicar()"> <!--botão que verifica velociadade -->
+    <div id="mul">Resultado</div> <!--Resultado-->
 
     <script>
-        function clicar(){
-            var vel = window.document.getElementById("txtvel");
-            if(Number(vel.value) > 60){
-                var multa = window.document.getElementById('mul');
-                multa.innerHTML = "Você está acima da velocidade permitida <strong>Multado<strong/> Cabaço";
-            }else{
-                var sem = window.document.getElementsByTagName('div')[0];
-                sem.innerText = "Parabéns, está Dentro da velocidade Permitida.";
+        function clicar(){ //script interno o botão chama a função clicar
+            var vel = window.document.getElementById("txtvel"); // a variável recebe a entrada
+            if(Number(vel.value) > 60){ //se o valor for maior que 60
+                var multa = window.document.getElementById('mul'); //pega o resultado
+                multa.innerHTML = "Você está acima da velocidade permitida <strong>Multado<strong/>";
+            }else{ //se não
+                var sem = window.document.getElementsByTagName('div')[0]; //pega o resultado
+                sem.innerText = "Parabéns, está Dentro da velocidade Permitida."; //e parabeniza
             }
         }
     </script>

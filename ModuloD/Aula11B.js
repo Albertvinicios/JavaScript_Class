@@ -1,6 +1,6 @@
 //Geração de condições com JS, nesse caso se usa console.log
-//e não window.document. taltal 
-//as condições são identicas ao java
+//e não window.document... 
+//as condições são semelhantes ao java
 var pais = "Afeganistão";
 if(pais == "Brasil"){
     console.log('Levei vantagiii');
